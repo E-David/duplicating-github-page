@@ -1,11 +1,14 @@
-try {
-	var repoUrl = 'https://api.github.com/users/e-david/repos?access_token=' + ACCESS_TOKEN
-	var profileUrl = 'https://api.github.com/users/e-david?access_token=' + ACCESS_TOKEN
+var getAccessTokenString = function() {
+	try {
+		var str = '?access_token=' + ACCESS_TOKEN
+	}
+	catch (error) {
+		var str = ''
+	}	
+	return str
 }
-catch (error) {
-	var repoUrl = 'https://api.github.com/users/e-david/repos'
-	var profileUrl = 'https://api.github.com/users/e-david'
-}
+
+
 
 var profileContainerNode = document.querySelector(".profile-container"),
 	repositoryContainerNode = document.querySelector(".repository-container"),
@@ -19,8 +22,7 @@ var getDate = function(dateInput) {
 
 var populateProfileData = function(searchTerms) {
 	var baseUrl = "https://api.github.com/users/",
-		accessTokenUrl = "?access_token=" + ACCESS_TOKEN,
-		profileUrl = baseUrl + searchTerms + accessTokenUrl
+		profileUrl = baseUrl + searchTerms + getAccessTokenString()
 	var promise = $.getJSON(profileUrl)
 	var responseHandler = function(profileData) {
 		htmlString = ""
@@ -46,8 +48,7 @@ var populateProfileData = function(searchTerms) {
 
 var populateRepositoryData = function(searchTerms) {
 	var baseUrl = "https://api.github.com/users/",
-		reposAccessTokenUrl = "/repos?access_token=" + ACCESS_TOKEN,
-		repoUrl = baseUrl + searchTerms + reposAccessTokenUrl
+		repoUrl = baseUrl + searchTerms + "/repos" + getAccessTokenString()
 		
 	var promise = $.getJSON(repoUrl)
 
