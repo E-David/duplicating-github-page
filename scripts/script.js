@@ -28,6 +28,7 @@ var populateProfileData = function(searchTerms) {
 				htmlString += profileData.company ? "<li>" + profileData.company + "</li>" : ""
 				htmlString += profileData.location ? "<li>" + profileData.location + "</li>" : ""
 				htmlString += profileData.email ? "<li>" + profileData.email + "</p>" : ""
+				htmlString += profileData.blog ? "<li>" + profileData.blog + "</li>" : ""
 				htmlString += profileData.created_at ? "<li>Joined on " + getDate(profileData.created_at) + "</li>" : ""
 			htmlString += "</ul>"
 		htmlString += "</div>"
