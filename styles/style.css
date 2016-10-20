@@ -1,0 +1,116 @@
+* {
+	font-size: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0;
+}
+
+.header-container {
+	background-color: #F5F5F5;
+	padding: 1%;
+}
+
+.header {
+	transform: translateX(18%)
+}
+
+.header span {
+	font-size: small;
+	padding: 1%;
+	font-weight: bolder
+}
+
+.page {
+	width: 70%;
+	margin: auto;
+	display: flex;
+}
+
+input {
+	font-size: 13px;
+	padding: 5px;
+	padding-right: 15%;
+}
+
+.profile-container, .repository-container {
+	display: inline-block;
+}
+
+.profile-container {
+	width: 23%;
+	margin: 15px;
+}
+
+img {
+	width: 100%;
+	margin-bottom: 5px;
+	border-radius: 5%;
+}
+
+.user-details h1 {
+	font-size: 26px;
+	line-height: 1px
+}
+
+.user-details h2 {
+	font-size: 20px;
+    font-weight: lighter;
+    line-height: 1px
+    color: #666;
+    margin: 0;
+}
+
+.follow-button {
+	width: 100%;
+	background-color: #EEEEEE;
+	font-size: 14px;
+	text-align: center;
+	padding: 5%;
+	margin-top: 0;
+	border-radius: 5%;
+}
+
+.follow-button:hover {
+	background-color: #ccc;
+}
+
+.user-details ul {
+	padding: 0;
+	border-top: 2px solid #EEEEEE;
+	padding-top: 10px;
+}
+
+.user-details li {
+	font-size: 14px;
+	list-style-type: none;
+	line-height: 25px;
+}
+
+
+.repository-container {
+	width: 70%;
+	margin: 10px;
+}
+
+.repository {
+	padding: 20px 0px;
+	border-top: 1px solid #EEEEEE;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.repository:first-child, .repository:last-child {
+	border-top: 2px solid #EEEEEE;;
+}
+
+.repository a {
+	color: #4078C0;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.repository a:hover {
+	text-decoration: underline;
+}
