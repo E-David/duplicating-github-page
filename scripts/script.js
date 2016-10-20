@@ -19,8 +19,9 @@ var getDate = function(dateInput) {
 
 var populateProfileData = function(searchTerms) {
 	var baseUrl = "https://api.github.com/users/",
-		accessTokenUrl = "?access_token=" + ACCESS_TOKEN,
-		profileUrl = baseUrl + searchTerms + accessTokenUrl
+		accessTokenUrl = "?access_token=",
+		baseProfileUrl = baseUrl + searchTerms + accessTokenUrl
+		profileUrl = baseProfileUrl + ACCESS_TOKEN
 	var promise = $.getJSON(profileUrl)
 	var responseHandler = function(profileData) {
 		htmlString = ""
@@ -46,8 +47,9 @@ var populateProfileData = function(searchTerms) {
 
 var populateRepositoryData = function(searchTerms) {
 	var baseUrl = "https://api.github.com/users/",
-		reposAccessTokenUrl = "/repos?access_token=" + ACCESS_TOKEN,
-		repoUrl = baseUrl + searchTerms + reposAccessTokenUrl
+		repoAccessTokenUrl = "/repos?access_token=",
+		baseRepoUrl = baseUrl + searchTerms + repoAccessTokenUrl
+		repoUrl = baseRepoUrl + ACCESS_TOKEN
 		
 	var promise = $.getJSON(repoUrl)
 
