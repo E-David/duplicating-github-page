@@ -1,4 +1,11 @@
-//API key for github page: 801d4108ac0093540bafd760053a6a7e12761771
+try {
+	var repoUrl = 'https://api.github.com/users/e-david/repos?access_token=' + ACCESS_TOKEN
+	var profileUrl = 'https://api.github.com/users/e-david?access_token=' + ACCESS_TOKEN
+}
+catch (error) {
+	var repoUrl = 'https://api.github.com/users/e-david/repos'
+	var profileUrl = 'https://api.github.com/users/e-david'
+}
 
 var profileContainerNode = document.querySelector(".profile-container"),
 	repositoryContainerNode = document.querySelector(".repository-container"),
